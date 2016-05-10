@@ -1,6 +1,7 @@
 var start = new Date().getTime();
 
-var asynchronousOperation = function(callback) { 
+// Modified for the purpose of demonstrating that m, n are respected
+var asynchronousOperation = function(callback) {
   var t = Math.floor(Math.random() * 500 + 2000);
   var now = new Date().getTime()
   setTimeout(function() {
