@@ -5,6 +5,15 @@ Assumptions:
   expensive and we are unlikely to get all the way to O(N), and
 - the frequency table will stay reasonably small.
 
+Two implementations to return unique elements in falling order of frequency:
+- frequency_naive: straight-forward dict-based version, roughly O(nlogn) + O(n)
+- frequency_charonly: optimized for 9-bit char sequences and should in theory
+  be close to O(n); alas, the cost of ord() is such that it tends to lose to 
+  naive implementation.
+
+In order to run tests and profiling, please run `make-random-gorp.sh` first to
+create a large pile of random characters.
+
 Profiling run:
 ```
 $ uname -a
