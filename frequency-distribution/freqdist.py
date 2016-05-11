@@ -22,3 +22,5 @@ def frequency_charonly(data):
     reply = sorted(zip(table, [chr(n) for n in xrange(256)]))
     reply.reverse()
     return [y for (x,y) in reply if x > 0]
+
+frequency = frequency_naive
